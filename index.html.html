@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M&B Clean | Limpieza de Tapizados</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0a9396;
+      --accent: #ee9b00;
+      --bg: #f9f9f9;
+      --text: #222;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease forwards;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    header {
+      background: linear-gradient(to bottom, #000000, #ffffff);
+      color: white;
+      text-align: center;
+      padding: 0;
+      position: relative;
+    }
+    header img.bg {
+      width: 100%;
+      height: auto;
+      max-height: 500px;
+      object-fit: cover;
+      opacity: 0.8;
+      filter: brightness(0.85);
+    }
+    .logo-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      animation: fadeInUp 1.2s ease forwards;
+    }
+    .logo-overlay img.logo {
+      width: 150px;
+      height: auto;
+      margin-bottom: 1rem;
+      transition: transform 0.5s ease;
+    }
+    .logo-overlay img.logo:hover {
+      transform: scale(1.05);
+    }
+    .logo-overlay p {
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 500;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    }
+    .section {
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .services ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+    .services li {
+      background: white;
+      padding: 1rem;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .services li:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    form {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      animation: fadeInUp 1.5s ease forwards;
+    }
+    form input,
+    form textarea {
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    form button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    form button:hover {
+      background: #007b82;
+    }
+    .cta {
+      text-align: center;
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      animation: fadeInUp 1.7s ease forwards;
+    }
+    .cta a {
+      background: var(--accent);
+      color: white;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.3s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .cta a img {
+      width: 20px;
+      margin-right: 8px;
+      filter: invert(1);
+    }
+    .cta a:hover {
+      background: #e07a00;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: var(--primary);
+      color: white;
+      margin-top: 3rem;
+      animation: fadeInUp 1.9s ease forwards;
+    }
+  </style>
+</head>
+<body>
+  <header class="fade-in">
+    <img class="bg" src="livingroom.png" alt="Living moderno limpio" />
+    <div class="logo-overlay">
+      <img class="logo" src="logo.png" alt="M&B Clean logo" />
+      <p>Limpieza profesional de tapizados a domicilio</p>
+    </div>
+  </header>
+
+  <section class="section services fade-in">
+    <h2>Servicios</h2>
+    <ul>
+      <li>Limpieza profunda de sillones y sofás</li>
+      <li>Colchones individuales y matrimoniales</li>
+      <li>Alfombras y tapetes</li>
+      <li>Tapicería interior de vehículos</li>
+    </ul>
+  </section>
+
+  <section class="section gallery fade-in">
+    <h2>Resultados</h2>
+    <img src="https://via.placeholder.com/400x300" alt="Antes y después 1">
+    <img src="https://via.placeholder.com/400x300" alt="Antes y después 2">
+    <img src="https://via.placeholder.com/400x300" alt="Antes y después 3">
+  </section>
+
+  <section class="section fade-in">
+    <h2>Solicitá tu presupuesto</h2>
+    <form>
+      <input type="text" placeholder="Nombre y apellido" required />
+      <input type="tel" placeholder="Teléfono o WhatsApp" required />
+      <textarea rows="4" placeholder="¿Qué necesitás limpiar? Comentanos brevemente"></textarea>
+      <button type="submit">Enviar solicitud</button>
+    </form>
+  </section>
+
+  <section class="section cta fade-in">
+    <a href="https://wa.me/5492916410315" target="_blank">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="WhatsApp" />
+      Contactar por WhatsApp
+    </a>
+    <a href="https://www.instagram.com/mbclean.brc" target="_blank">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" />
+      Ver en Instagram
+    </a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 M&B Clean - Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>
